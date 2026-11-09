@@ -9,55 +9,114 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <span class="logo-icon">ABC</span>
-        <span>Caçambas</span>
+    <div class="container header-content">
+      <div class="logo">ABC CAÇAMBAS</div>
+      <div class="header-right">
+        <span class="plantao">PLANTÃO 24H</span>
+        <a href="https://wa.me/5511999999999" class="btn-whats" target="_blank">WhatsApp</a>
       </div>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>A ABC FAZ<br>LOCAÇÃO DE<br>CAÇAMBAS</h1>
-      <p>Especializados em coletas de entulhos,<br>resíduos sólidos de construções civil</p>
+      <h1>LOCAÇÃO DE CAÇAMBAS</h1>
+      <p>Entrega rápida na região do ABC. Caçambas a partir de R$ 250.</p>
+      <a href="#precos" class="btn-orange">Ver Preços</a>
     </div>
   </section>
 
-  <section class="trucks">
-    <img src="/static/images/cacamba-real.jpg" alt="Caçamba ABC Caçambas">
-  </section>
-
-  <section class="cta">
+  <section id="tamanhos" class="section">
     <div class="container">
-      <a href="#contato" class="btn-red">Entre em Contato</a>
+      <h2>Escolha o Tamanho</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="badge">COMPACTA</div>
+          <h3>3 m³</h3>
+          <p>Pequenos projetos e limpezas residenciais.</p>
+          <span class="tag">Até 2 toneladas</span>
+        </div>
+        <div class="card">
+          <div class="badge popular">POPULAR</div>
+          <h3>5 m³</h3>
+          <p>Reformas residenciais e obras médias.</p>
+          <span class="tag">Até 3 toneladas</span>
+        </div>
+        <div class="card">
+          <div class="badge">PRO</div>
+          <h3>7 m³</h3>
+          <p>Reformas completas e obras de médio porte.</p>
+          <span class="tag">Até 5 toneladas</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="sobre" class="sobre">
+  <section id="precos" class="section dark">
     <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>A ABC Caçambas é referência no aluguel de caçambas para coleta de entulhos, resíduos sólidos de construção e terra na região do ABC. Comprometida com a sustentabilidade e a conformidade legal, a empresa atua rigorosamente de acordo com as leis municipais, garantindo o descarte adequado dos resíduos da construção civil. Em São Paulo, a legislação proíbe o descarte de entulho em vias públicas e limita o envio de até 50 kg por dia para a coleta domiciliar convencional. Com todas as autorizações e licenças necessárias, a ABC Caçambas oferece um serviço confiável e regularizado para atender às suas necessidades com segurança e respeito ao meio ambiente.</p>
-      <p><strong>Caçambas a partir de R$ 250.</strong></p>
-      <a href="#contato" class="btn-red">Entre em Contato</a>
+      <h2>Tamanhos e Valores</h2>
+      <div class="price-list">
+        <div class="price-item"><span class="size">3m³</span> Mini obra · troca de piso <strong>R$ 250</strong></div>
+        <div class="price-item"><span class="size">5m³</span> Obra pequena · banheiro <strong>R$ 320</strong></div>
+        <div class="price-item highlight"><span class="size">7m³</span> Reforma completa · mais pedida <strong>R$ 380</strong></div>
+        <div class="price-item"><span class="size">10m³</span> Construção · telhado <strong>R$ 480</strong></div>
+      </div>
+      <a href="https://wa.me/5511999999999" class="btn-orange" target="_blank">Pedir Caçamba Agora</a>
     </div>
   </section>
 
-  <section id="contato" class="contato">
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <h2>Quem Já Usou</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>“Pedi de manhã e chegou no mesmo dia. Caçamba limpa e retirada no prazo.”</p>
+          <span>Marcos – Santo André</span>
+        </div>
+        <div class="review">
+          <p>“Preço justo e atendimento rápido. Recomendo para obras no ABC.”</p>
+          <span>Ana – São Bernardo</span>
+        </div>
+        <div class="review">
+          <p>“Serviço honesto. Nota fiscal na hora e descarte correto.”</p>
+          <span>Carlos – São Caetano</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orcamento" class="section">
+    <div class="container">
+      <h2>Peça seu Orçamento</h2>
+      <p style="text-align:center;margin-bottom:24px;">Envie seus dados e converse com a equipe pelo WhatsApp.</p>
+      <form id="form-orcamento" class="form-box" onsubmit="enviarWhatsApp(event)">
+        <label>Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+        <label>CEP da entrega</label>
+        <input type="text" id="cep" placeholder="00000-000" required>
+        <label>Tamanho da caçamba</label>
+        <select id="tamanho" required>
+          <option value="3 m³">3 m³</option>
+          <option value="5 m³" selected>5 m³</option>
+          <option value="7 m³">7 m³</option>
+          <option value="10 m³">10 m³</option>
+        </select>
+        <label>Detalhes (opcional)</label>
+        <textarea id="detalhes" placeholder="Bairro, data desejada, detalhes da obra"></textarea>
+        <button type="submit" class="btn-orange">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </section>
     <div class="container">
       <h2>Fale Conosco</h2>
       <p>Atendemos toda a região do ABC</p>
-      <a href="https://wa.me/5511999999999" class="btn-red" target="_blank">WhatsApp (11) 99999-9999</a>
+      <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
+      <a href="https://wa.me/5511999999999" class="btn-orange" target="_blank">Chamar no WhatsApp</a>
     </div>
   </section>
 
-  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/5511999999999" class="emergency" target="_blank">EMERGÊNCIA</a>
 
   <footer>
     <p>ABC Caçambas • Locação de caçambas na região do ABC</p>
