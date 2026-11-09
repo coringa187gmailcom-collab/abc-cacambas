@@ -122,5 +122,25 @@
   <footer>
     <p>ABC Caçambas • Locação de caçambas na região do ABC</p>
   </footer>
+  <script>
+    async function enviarWhatsApp(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const cep = document.getElementById('cep').value;
+      const tamanho = document.getElementById('tamanho').value;
+      const detalhes = document.getElementById('detalhes').value;
+
+      try {
+        await fetch('/api/pedido', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({nome, cep, tamanho, detalhes})
+        });
+      } catch(err) {}
+
+      const msg = `Olá! Quero um orçamento de caçamba.%0A%0ANome: ${nome}%0ACEP: ${cep}%0ATamanho: ${tamanho}%0ADetalhes: ${detalhes}`;
+      window.open(`https://wa.me/5511967845456?text=${msg}`, '_blank');
+    }
+  </script>
 </body>
 </html>
