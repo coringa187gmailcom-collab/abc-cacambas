@@ -2,7 +2,14 @@
 body { font-family: 'Inter', sans-serif; color: #222; line-height: 1.6; background: #faf8f5; }
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
-.header { background: #111; color: white; padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+.aviso-golpe {
+  background: #fff3cd;
+  color: #856404;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ffeeba;
+}
 .header-content { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-weight: 800; font-size: 1.3rem; color: #f39c12; letter-spacing: 1px; }
 .header-right { display: flex; align-items: center; gap: 12px; }
