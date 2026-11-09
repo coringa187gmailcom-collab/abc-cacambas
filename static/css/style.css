@@ -1,0 +1,37 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #222; line-height: 1.6; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+.header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+.header .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 700; }
+.logo-icon { background: linear-gradient(135deg, #f39c12, #e67e22); color: white; padding: 6px 12px; border-radius: 50%; font-size: 0.9rem; }
+nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: 500; }
+
+.hero { background: #2c1a5e; color: white; padding: 80px 0 60px; text-align: center; }
+.hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.15; letter-spacing: 1px; }
+.hero p { margin-top: 24px; font-size: 1.15rem; opacity: 0.95; }
+
+.trucks img { width: 100%; display: block; }
+
+.cta { text-align: center; padding: 40px 0; }
+.btn-red { display: inline-block; background: #e74c3c; color: white; padding: 16px 48px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.btn-red:hover { background: #c0392b; }
+
+.sobre { padding: 60px 0; text-align: center; }
+.sobre h2 { font-size: 2rem; margin-bottom: 24px; }
+.sobre p { max-width: 700px; margin: 0 auto 16px; font-size: 1.05rem; text-align: left; }
+.sobre .btn-red { margin-top: 24px; }
+
+.contato { background: #f8f9fa; padding: 60px 0; text-align: center; }
+.contato h2 { margin-bottom: 12px; }
+.contato p { margin-bottom: 20px; }
+
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; }
+
+footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  nav { display: none; }
+}
